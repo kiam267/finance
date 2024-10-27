@@ -1,0 +1,9 @@
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_c21vb3RoLXNoZWVwZG9nLTU5LmNsZXJrLmFjY291bnRzLmRldiQ
+CLERK_PUBLISHABLE_KEY=pk_test_c21vb3RoLXNoZWVwZG9nLTU5LmNsZXJrLmFjY291bnRzLmRldiQ
+CLERK_SECRET_KEY=sk_test_ITgjmdMQ2VIQEg2nQH5sUPDSnLErFkLEk3RE7vmvBp
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+
+DATABASE_URL=postgresql://finance_owner:y6lpOSm1MaDx@ep-raspy-bread-a5h5aof2.us-east-2.aws.neon.tech/finance?sslmode=require
+
+NEXT_PUBLIC_APP_URL=http://localhost:3000

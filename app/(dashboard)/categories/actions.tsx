@@ -12,8 +12,8 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-import { useOpenAccount } from '@/features/accounts/hooks/use-open-account';
-import { useDeleteAccount } from '@/features/accounts/api/use-delete-accounts';
+import { useOpenCategories } from '@/features/categories/hooks/use-open-category';
+import { useDeleteCategory } from '@/features/categories/api/use-delete-category';
 
 type Props = {
     id: string;
@@ -23,10 +23,10 @@ export const Actions = ({ id }: Props) => {
 
     const [ConfirmDialog, confirm] = useConfirm(
         "Are your sure?",
-        "You are about to delete this account."
+        "You are about to delete this transaction."
     )
-    const deleteMutation = useDeleteAccount(id);
-    const { onOpen } = useOpenAccount();
+    const deleteMutation = useDeleteCategory(id);
+    const { onOpen } = useOpenCategories();
 
 
 

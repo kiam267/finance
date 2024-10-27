@@ -1,10 +1,11 @@
 import { Hono } from 'hono';
 // import { HTTPException } from 'hono/http-exception';
 import { handle } from 'hono/vercel';
-import { z } from 'zod'; 
+import { z } from 'zod';
 import { zValidator } from '@hono/zod-validator';
 import { clerkMiddleware, getAuth } from '@hono/clerk-auth';
 import accounts from './accounts';
+import categories from './categories';
 export const runtime = 'edge';
 
 const app = new Hono().basePath('/api');
@@ -17,7 +18,9 @@ const app = new Hono().basePath('/api');
 //     return c.json({ error: 'Internal Server Error' }, 500);
 // });
 
-const route = app.route('/accounts', accounts);
+const route = app
+    .route('/accounts', accounts)
+    .route('/categories', categories);
 
 app.get('/health', clerkMiddleware(), (c) => {
     const auth = getAuth(c);
